@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Iniciar Sesion / Registro</title>
+</head>
+
+<body>
+    <div style="-webkit-app-region: no-drag" class="cerrar">
+        <button class="btncerrar" id="btnclose">
+            <svg xmlns="http://www.w3.org/2000/svg" height="70" width="70" viewBox="0 0 70 70">
+                <path fill="yellow"
+                    d="M24.209 49 35 38.209 45.791 49 49 45.791 38.209 35 49 24.209 45.791 21 35 31.791 24.209 21 21 24.209 31.791 35 21 45.791ZM35 64.604Q28.729 64.604 23.297 62.343Q17.864 60.084 13.891 56.109Q9.916 52.136 7.657 46.703Q5.396 41.271 5.396 35Q5.396 28.802 7.657 23.37Q9.916 17.938 13.891 13.964Q17.864 9.989 23.297 7.693Q28.729 5.396 35 5.396Q41.198 5.396 46.63 7.693Q52.063 9.989 56.036 13.964Q60.011 17.938 62.307 23.37Q64.604 28.802 64.604 35Q64.604 41.271 62.307 46.703Q60.011 52.136 56.036 56.109Q52.063 60.084 46.63 62.343Q41.198 64.604 35 64.604ZM35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35ZM35 59.646Q45.136 59.646 52.391 52.427Q59.646 45.209 59.646 35Q59.646 24.864 52.391 17.609Q45.136 10.354 35 10.354Q24.864 10.354 17.609 17.609Q10.354 24.864 10.354 35Q10.354 45.209 17.609 52.427Q24.864 59.646 35 59.646Z" />
+            </svg>
+        </button>
+    </div>
+    <div style="-webkit-app-region: drag" class="container" id="container">
+        <div class="form-container sign-in-container">
+            <div class="formulario">
+                <img src="assets/StinkyLogo.png">
+                <h1>Iniciar Sesion</h1>
+                <br />
+                <input style="-webkit-app-region: no-drag" id="login-username" type="text" placeholder="Usuario" />
+                <input style="-webkit-app-region: no-drag" id="login-password" type="password"
+                    placeholder="Contraseña" />
+                <button style="-webkit-app-region: no-drag" id="submit" onclick="login2()">Iniciar Sesion</button>
+            </div>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-right">
+                    <button style="-webkit-app-region: no-drag" id="empleado">Entrar como Empleado</button>
+                    <h1>¡Bienvenido de vuelta!</h1>
+                    <p>Introduce tus datos para poder iniciar sesion y entrar a la aplicacion</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/login2.js"></script>
+</body>
+
+</html>

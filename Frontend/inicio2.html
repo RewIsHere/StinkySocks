@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/inicio.css">
+    <script src="js/test1.js"></script>
+    <title>Inicio Empleado</title>
+</head>
+
+<body>
+    <div style="-webkit-app-region: no-drag" class="cerrar">
+        <button style="-webkit-app-region: no-drag" class="btncerrar" id="btnclose">
+            <svg xmlns="http://www.w3.org/2000/svg" height="70" width="70" viewBox="0 0 70 70">
+                <path fill="yellow"
+                    d="M24.209 49 35 38.209 45.791 49 49 45.791 38.209 35 49 24.209 45.791 21 35 31.791 24.209 21 21 24.209 31.791 35 21 45.791ZM35 64.604Q28.729 64.604 23.297 62.343Q17.864 60.084 13.891 56.109Q9.916 52.136 7.657 46.703Q5.396 41.271 5.396 35Q5.396 28.802 7.657 23.37Q9.916 17.938 13.891 13.964Q17.864 9.989 23.297 7.693Q28.729 5.396 35 5.396Q41.198 5.396 46.63 7.693Q52.063 9.989 56.036 13.964Q60.011 17.938 62.307 23.37Q64.604 28.802 64.604 35Q64.604 41.271 62.307 46.703Q60.011 52.136 56.036 56.109Q52.063 60.084 46.63 62.343Q41.198 64.604 35 64.604ZM35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35ZM35 59.646Q45.136 59.646 52.391 52.427Q59.646 45.209 59.646 35Q59.646 24.864 52.391 17.609Q45.136 10.354 35 10.354Q24.864 10.354 17.609 17.609Q10.354 24.864 10.354 35Q10.354 45.209 17.609 52.427Q24.864 59.646 35 59.646Z" />
+            </svg>
+        </button>
+    </div>
+    <div style="-webkit-app-region: drag" class="fondo">
+        <div class="sidebar">
+            <img class="logo" src="assets/StinkyLogo.png">
+            <br />
+            <ul>
+                <li>
+                    <a style="-webkit-app-region: no-drag" href="#">
+                        <img class="icono" src="assets/Inicio.png">
+                    </a>
+                </li>
+                <li>
+                    <a style="-webkit-app-region: no-drag" href="#">
+                        <img class="icono" src="assets/Info.png">
+                    </a>
+                </li>
+                <li>
+                    <a style="-webkit-app-region: no-drag" href="#">
+                        <img class="icono" src="assets/CerrarSesion.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mainframe">
+
+            <div class="titulo">
+                <h1>¡Bienvenido Stinky!</h1>
+            </div><br><br>
+            <div class="subtitulo">
+                <h2>¿Que quieres hacer hoy?</h2>
+            </div>
+            <div class="botones">
+                <button style="-webkit-app-region: no-drag" type="button" onclick="ventas()" id="ventas" class="btn"
+                    style="margin-right: 30px;">
+                    <img src="assets/Ventas.png">
+                </button>
+                <button style="-webkit-app-region: no-drag" type="button" onclick="productos()" id="productos"
+                    class="btn">
+                    <img src="assets/Productos.png">
+                </button>
+            </div>
+            <div class="botones2">
+                <button style="-webkit-app-region: no-drag" type="button" onclick="compras()" id="compras" class="btn">
+                    <img src="assets/Compras.png">
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "stinky",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "RewIsHere",
+  "devDependencies": {
+    "electron": "^19.1.9"
+  },
+  "dependencies": {
+    "electron-packager": "^15.5.1",
+    "electron-store": "^8.0.1",
+    "promise-mysql": "^5.2.0",
+    "sweetalert2": "^11.10.1"
+  }
+}

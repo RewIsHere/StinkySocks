@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&amp;display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/productos.css">
+    <title>Productos</title>
+
+</head>
+
+<body>
+    <div style="-webkit-app-region: no-drag" class="cerrar">
+        <button style="-webkit-app-region: no-drag" class="btncerrar" id="btnclose">
+            <svg xmlns="http://www.w3.org/2000/svg" height="70" width="70" viewBox="0 0 70 70">
+                <path fill="yellow"
+                    d="M24.209 49 35 38.209 45.791 49 49 45.791 38.209 35 49 24.209 45.791 21 35 31.791 24.209 21 21 24.209 31.791 35 21 45.791ZM35 64.604Q28.729 64.604 23.297 62.343Q17.864 60.084 13.891 56.109Q9.916 52.136 7.657 46.703Q5.396 41.271 5.396 35Q5.396 28.802 7.657 23.37Q9.916 17.938 13.891 13.964Q17.864 9.989 23.297 7.693Q28.729 5.396 35 5.396Q41.198 5.396 46.63 7.693Q52.063 9.989 56.036 13.964Q60.011 17.938 62.307 23.37Q64.604 28.802 64.604 35Q64.604 41.271 62.307 46.703Q60.011 52.136 56.036 56.109Q52.063 60.084 46.63 62.343Q41.198 64.604 35 64.604ZM35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35Q35 35 35 35ZM35 59.646Q45.136 59.646 52.391 52.427Q59.646 45.209 59.646 35Q59.646 24.864 52.391 17.609Q45.136 10.354 35 10.354Q24.864 10.354 17.609 17.609Q10.354 24.864 10.354 35Q10.354 45.209 17.609 52.427Q24.864 59.646 35 59.646Z" />
+            </svg>
+        </button>
+    </div>
+
+    <!--ACTUALIZAR REGISTRO-->
+    <div style="-webkit-app-region: no-drag" id="modal-form-update" class="modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-update">
+                        <div class="row p-2">
+                            <input style="-webkit-app-region: no-drag" type="number" id="input-txt-id-update"
+                                class="form-control" placeholder="ID" value='' required disabled>
+                        </div>
+                        <div class="row p-2">
+                            <input style="-webkit-app-region: no-drag" type="text" id="input-txt-marca-update"
+                                class="form-control" placeholder="Marca" value='' required>
+                        </div>
+                        <div class="row p-2">
+                            <input style="-webkit-app-region: no-drag" type="text" id="input-txt-descripcion-update"
+                                class="form-control" placeholder="Descripcion" value='' required>
+                        </div>
+                        <div class="row p-2">
+                            <input style="-webkit-app-region: no-drag" type="number" id="input-txt-precio-update"
+                                class="form-control" placeholder="Precio" required>
+                        </div>
+                        <div class="row p-2">
+                            <input style="-webkit-app-region: no-drag" id="input-txt-stock-update" type="number"
+                                class="form-control" placeholder="Stock" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button style="-webkit-app-region: no-drag" type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Cerrar</button>
+                    <button style="-webkit-app-region: no-drag" type="submit" form="form-update"
+                        class="btn btn-primary">Actualizar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="-webkit-app-region: drag" class="fondo">
+
+        <div class="sidebar">
+            <img class="logo" src="assets/StinkyLogo.png">
+            <br />
+            <ul>
+                <li>
+                    <a style="-webkit-app-region: no-drag" href="inicio.html">
+                        <img class="icono" src="assets/Inicio.png">
+                    </a>
+                </li>
+                <li>
+                    <a style="-webkit-app-region: no-drag" href="#">
+                        <img class="icono" src="assets/Info.png">
+                    </a>
+                </li>
+                <li>
+                    <a style="-webkit-app-region: no-drag" href="index.html">
+                        <img class="icono" src="assets/CerrarSesion.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="mainframe">
+            <div class="titulo">
+                <h6> Productos
+                </h6>
+            </div>
+            <div class="contenido">
+                <div class="cuadro">
+                    <!--TABLA-->
+                    <div id="table-wrapper">
+                        <div id="table-scroll">
+                            <table class="table table-striped table-hover" id="myTable">
+                                <thead class="sticky-top py-5">
+                                    <tr>
+                                        <th class="text-center" scope="col">ID</th>
+                                        <th class="text-center" scope="col">Marca</th>
+                                        <th class="text-center" scope="col">Descripcion</th>
+                                        <th class="text-center" scope="col">Precio</th>
+                                        <th class="text-center" scope="col">Stock</th>
+                                        <th class="text-center" scope="col">Accion</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table_body" style="text-align: center;">
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--DIV DE BUSQUEDA-->
+                    <div class="cuadrobusqueda">
+                        <div class="column">
+                            <div class="container mb-5 ms-3 justify-content-center">
+                                <input style="-webkit-app-region: no-drag" class="form-control" type="number"
+                                    id="producto_id" placeholder="ID Producto" required>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="container mb-5 ms-3 justify-content-center">
+                                <a style="-webkit-app-region: no-drag" id='buscar-btn' href="#" class="a-btn">
+                                    <span class="text">Buscar</span>
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="33" width="43"
+                                        viewBox="0 0 30 30">
+                                        <path fill="white"
+                                            d="M15 25.188 13.25 23.406 20.438 16.25H4.813V13.75H20.438L13.25 6.563L15 4.813L25.188 15Z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/JavaScript" src="js/productos.js"></script>
+</body>
+
+</html>
